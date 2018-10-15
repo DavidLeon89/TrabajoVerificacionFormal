@@ -1,0 +1,9 @@
+package body convertCelsiusToFahrenheit with SPARK_Mode => On is
+   function  convert (celsiusTemp: Float := 24.0) return Float is
+   begin
+      return  ((celsiusTemp * 1.8) + 32.0);
+   end convert;
+
+
+
+end convertCelsiusToFahrenheit;

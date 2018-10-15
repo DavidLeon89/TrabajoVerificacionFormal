@@ -1,0 +1,192 @@
+{
+  "spark": [
+    {
+      "name": "convertCelsiusToFahrenheit",
+      "sloc": [
+        {
+          "file": "convertcelsiustofahrenheit.ads",
+          "line": 1
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "convertCelsiusToFahrenheit.convert",
+      "sloc": [
+        {
+          "file": "convertcelsiustofahrenheit.ads",
+          "line": 3
+        }
+      ],
+      "spark": "all"
+    }
+  ],
+  "flow": [
+  ],
+  "proof": [
+    {
+      "file": "convertcelsiustofahrenheit.adb",
+      "line": 4,
+      "col": 36,
+      "rule": "VC_FP_OVERFLOW_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "convertCelsiusToFahrenheit.convert",
+        "sloc": [
+          {
+            "file": "convertcelsiustofahrenheit.ads",
+            "line": 3
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 7657,
+              "time": 8.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "convertcelsiustofahrenheit.adb",
+      "check_line": 4,
+      "check_col": 36,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 7.99999982118607E-02
+        }
+      }
+    },
+    {
+      "file": "convertcelsiustofahrenheit.adb",
+      "line": 4,
+      "col": 29,
+      "rule": "VC_FP_OVERFLOW_CHECK",
+      "severity": "medium",
+      "entity": {
+        "name": "convertCelsiusToFahrenheit.convert",
+        "sloc": [
+          {
+            "file": "convertcelsiustofahrenheit.ads",
+            "line": 3
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Invalid",
+              "steps": 3932,
+              "time": 6.00000000000000E-02
+            },
+            "CVC4_CE": {
+              "result": "Unknown (other)",
+              "steps": 46323,
+              "time": 1
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "convertcelsiustofahrenheit.adb",
+      "check_line": 4,
+      "check_col": 29,
+      "msg_id": 0,
+      "how_proved": "prover"
+    },
+    {
+      "file": "convertcelsiustofahrenheit.ads",
+      "line": 9,
+      "col": 12,
+      "rule": "VC_POSTCONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "convertCelsiusToFahrenheit.convert",
+        "sloc": [
+          {
+            "file": "convertcelsiustofahrenheit.ads",
+            "line": 3
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 2.00000000000000E-02
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "convertcelsiustofahrenheit.ads",
+      "check_line": 9,
+      "check_col": 12,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 1.99999995529652E-02
+        }
+      }
+    }
+  ],
+  "assumptions": [
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "convertCelsiusToFahrenheit.convert",
+          "sloc": [
+            {
+              "file": "convertcelsiustofahrenheit.ads",
+              "line": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "convertCelsiusToFahrenheit",
+          "sloc": [
+            {
+              "file": "convertcelsiustofahrenheit.ads",
+              "line": 1
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "timings": {
+    "marking": 9.64639984886162E-05,
+    "globals (basic)": 1.62783006089740E-04,
+    "globals/properties (advanced)": 3.21855011861771E-04,
+    "flow analysis": 8.28290998470038E-04,
+    "codepeer results": 3.24600000567443E-06,
+    "init_why_sections": 1.52116001117975E-04,
+    "translation of standard": 2.44637904688716E-03,
+    "translation of compilation unit": 4.86956996610388E-04,
+    "proof": 1.57786214351654E+00
+  }
+}
